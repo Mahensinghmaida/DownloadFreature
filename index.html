@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Redirecting...</title>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const playStoreUrl =
+          "https://play.google.com/store/apps/details?id=com.auctionhubindia.android";
+
+        const appStoreUrl = "https://apps.apple.com/app/id123456789";
+
+        // const websiteUrl = "https://www.auctionhubindia.com/en/";
+
+        const userAgent =
+          navigator.userAgent || navigator.vendor || window.opera;
+
+        if (/android/i.test(userAgent)) {
+          window.location.replace(playStoreUrl);
+        } else  (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+          window.location.replace(appStoreUrl);
+         } //else {
+        //   window.location.replace(websiteUrl);
+        //   s;
+        // }
+      });
+    </script>
+  </head>
+  <body>
+    <h2>Redirecting...</h2>
+    <p>Please wait while we redirect you to the correct destination.</p>
+  </body>
+</html>
